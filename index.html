@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>豆瓣电影</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="https://img3.doubanio.com/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<!-- 顶部菜单栏 -->
+<div id='top_nav' class="top-nav">
+	<div class='db'>
+		<div class='top-nav-info'>
+			<a href="javascript:void(0)">登录</a>
+			<a href="javascript:void(0)">注册</a>
+		</div>
+
+		<div class='downloadapp'>
+			<a href="https://www.douban.com/doubanapp/app?channel=qipao">下载豆瓣客户端</a>
+			<div class='downloadapp-tip'>
+				<p class='dd-pic'>豆瓣</p>
+				<p class='download-pic'>扫码直接下载</p>
+				<div class='downloadapp-mobile'>
+					<a href="javascript:void(0)">iPhone</a>
+					<span>·</span>
+					<a href="javascript:void(0)" class='android'>Android</a>
+				</div>
+			</div>
+		</div>
+		<div class='top-nav-items'>
+			<ul>
+				<li><a href='https://www.douban.com/'>豆瓣</a></li>
+				<li><a href='https://book.douban.com/'>读书</a></li>
+				<li><a href='https://movie.douban.com/'>电影</a></li>
+				<li><a href='https://music.douban.com/'>音乐</a></li>
+				<li><a href='https://www.douban.com/location'>同城</a></li>
+				<li><a href='https://www.douban.com/group'>小组</a></li>
+				<li><a href='https://read.douban.com/?dcs=top-nav&dcm=douban'>阅读</a></li>
+				<li><a href='https://douban.fm/?from_=shire_top_nav'>FM</a></li>
+				<li><a href='https://time.douban.com/?dt_time_source=douban-web_top_nav'>时间</a></li>
+				<li><a href='https://market.douban.com/?utm_campaign=douban_top_nav&utm_source=douban&utm_medium=pc_web'>豆品</a></li>
+				<li><a href='https://movie.douban.com/#more'>更多</a></li>
+			</ul>
+		</div>
+
+	</div>
+</div>
+
+<!-- 搜索&影视条目栏 -->
+<div id='nav-movie' class='nav'>
+	<div class='nav-wrap'>
+		<div class='nav-primary'>
+			<div class='nav-logo'>
+				<a href="https://movie.douban.com">豆瓣电影</a>
+			</div>
+			<div class='nav-search'>
+				<form action="https://movie.douban.com/subject_search" method='get'>
+					<fieldset>
+						<legend>搜索：</legend>
+						<label for="inp-query"></label>
+						<div class='inp'>
+							<input type="text" ic='inp-query' name='search-text' size='22' maxlength='60' placeholder="搜索电影、电视剧、综艺、影人">
+						</div>
+						<div class='inp-btn'>
+							<input type="submit" value='搜索'>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class='nav-secondary'>
+		<div class='nav-items'>
+			<ul>
+				<li><a href="https://movie.douban.com/cinema/nowplaying/">影讯&购票</a></li>
+				<li><a href="https://movie.douban.com/explore">选电影</a></li>
+				<li><a href="https://movie.douban.com/tv/">电视剧</a></li>
+				<li><a href="https://movie.douban.com/chart">排行榜</a></li>
+				<li><a href="https://movie.douban.com/tag/">分类</a></li>
+				<li><a href="https://movie.douban.com/review/best/">影评</a></li>
+				<li><a href="https://movie.douban.com/annual/2017?source=navigation">2017年度榜单</a></li>
+				<li><a href="https://movie.douban.com/standbyme/2017?source=navigation">2017观影报告</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<!-- 网页主体 -->
+<div id='page_wrapper' class='page-wrapper'>
+	<div id='page_content' class='page-content'>
+		<!-- 页面左侧 -->
+		<div class='article'>
+			<!-- 正在热映 -->
+			<div class='screening' id='screening'>
+				<div class='screening-hd'>
+					<div class='slide-control'>
+						<span class='prev-btn'><a href="javascript:void(0);"></a></span>
+						<span class='next-btn'><a href="javascript:void(0);"></a></span>
+					</div>
+					<div class='slide-tip'>
+						<span class='slide-index'>1</span>
+						/
+						<span class='slide-max'></span>
+					</div>
+					<h2>
+						正在热映
+						<span><a href="https://movie.douban.com/cinema/nowplaying/">全部正在热映»</a></span>
+						<span><a href="https://movie.douban.com./later/">即将上映»</a></span>
+					</h2>
+				</div>
+				<div class='screening-bd'>
+					<ul class='slide-content' id='slide_content' style='left: 0px'>
+						<!-- 动态创建电影条目 -->
+					</ul>
+				</div>
+			</div>
+			<!-- 广告海报 -->
+			<div class='movie-poster'>
+				<a href="https://www.douban.com/note/689208438/">
+					<img src="https://img3.doubanio.com/view/dale-online/dale_ad/public/7fc3bcc9497f655.jpg" alt="">
+				</a>
+			</div>
+			<!-- 热门电影 -->
+			<div class='hot-movie'>
+				<div class='top-filter'>
+					<h2>
+						<div class='activate'>最近热门电影</div>
+						<div class='filter'>
+							<div class='tags'>
+								<div class='tags-list'>
+									<a href="javascript:void(0);" >热门</a>
+									<a href="javascript:void(0);">最新</a>
+									<a href="javascript:void(0);">豆瓣高分</a>
+									<a href="javascript:void(0);">冷门佳片</a>
+									<a href="javascript:void(0);">华语</a>
+									<a href="javascript:void(0);">欧美</a>
+									<a href="javascript:void(0);">韩国</a>
+									<a href="javascript:void(0);">日本</a>
+								</div>
+							</div>
+						</div>
+						<a href="https://movie.douban.com/explore#!type=movie&tag=%E7%83%AD%E9%97%A8;">更多»</a>
+					</h2>
+				</div>
+				<div class='item-list'>
+					<div class='slider'>
+						<div class='slide-container'>
+							<div class='slide-wrapper'>
+								<div class='slide-page'>
+									<a href="javascript:void(0);" class='item'>
+										<div class='item-cover'>
+											<img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2526405034.jpg" alt="狄仁杰之四大天王">
+										</div>
+										<p>狄仁杰之四大天王
+											<strong>6.3</strong>
+										</p>
+									</a>
+									<a href="javascript:void(0);" class='item'>
+										<div class='item-cover'>
+											<img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2508259902.jpg" alt="瞒天过海：美人计">
+										</div>
+										<p>瞒天过海：美人计
+											<strong>6.8</strong>
+										</p>
+									</a>
+									<a href="javascript:void(0);" class='item'>
+										<div class='item-cover'>
+											<img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2528357976.jpg" alt="修女">
+										</div>
+										<p>修女
+											<strong>6.5</strong>
+										</p>
+									</a>
+									<a href="javascript:void(0);" class='item'>
+										<div class='item-cover'>
+											<img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2525020357.jpg" alt="解除好友2：暗网">
+										</div>
+										<p>解除好友2：暗网
+											<strong>7.4</strong>
+										</p>
+									</a>
+									<a href="javascript:void(0);" class='item'>
+										<div class='item-cover'>
+											<img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2522713321.jpg" alt="快照">
+										</div>
+										<p>快照
+											<strong>7.6</strong>
+										</p>
+									</a>
+									<a href="javascript:void(0);" class='item'>
+										<div class='item-cover'>
+											<img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2518865763.jpg" alt="遗传厄运">
+										</div>
+										<p>遗传厄运
+											<strong>7.2</strong>
+										</p>
+									</a>
+									<a href="javascript:void(0);" class='item'>
+										<div class='item-cover'>
+											<img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2531034314.jpg" alt="升级">
+										</div>
+										<p>升级
+											<strong>8.1</strong>
+										</p>
+									</a>
+									<a href="javascript:void(0);" class='item'>
+										<div class='item-cover'>
+											<img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2521499639.jpg" alt="死侍2">
+										</div>
+										<p>死侍2
+											<strong>7.5</strong>
+										</p>
+									</a>
+									<a href="javascript:void(0);" class='item'>
+										<div class='item-cover'>
+											<img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2525635186.jpg" alt="寄宿学校">
+										</div>
+										<p>寄宿学校
+											<strong>7.3</strong>
+										</p>
+									</a>
+									<a href="javascript:void(0);" class='item'>
+										<div class='item-cover'>
+											<img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2529112058.jpg" alt="致所有我曾爱过的男孩">
+										</div>
+										<p>致所有我曾爱过的男孩
+											<strong>7.2</strong>
+										</p>
+									</a>
+								</div>
+								<div class='slide-ctrl'>
+									<a href="javascript:void(0)" class='btn-prev'></a>
+									<a href="javascript:void(0)" class='dot'></a>
+									<a href="javascript:void(0)" class='dot'></a>
+									<a href="javascript:void(0)" class='dot'></a>
+									<a href="javascript:void(0)" class='dot'></a>
+									<a href="javascript:void(0)" class='dot'></a>
+									<a href="javascript:void(0)" class='btn-next'></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 热门电视剧 -->
+			<div class='hot-tv'>
+				<div class='top-filter'>
+					<h2>
+						<div class='activate'>最近热门电视剧</div>
+						<div class='filter'>
+							<div class='tags'>
+								<div class='tags-list'>
+									<a href="javascript:void(0);" >热门</a>
+									<a href="javascript:void(0);">国产剧</a>
+									<a href="javascript:void(0);">综艺</a>
+									<a href="javascript:void(0);">美剧</a>
+									<a href="javascript:void(0);">日剧</a>
+									<a href="javascript:void(0);">韩剧</a>
+									<a href="javascript:void(0);">日本动画</a>
+									<a href="javascript:void(0);">纪录片</a>
+								</div>
+							</div>
+						</div>
+						<a href="https://movie.douban.com/tv#!type=tv&tag=%E7%83%AD%E9%97%A8;">更多»</a>
+					</h2>
+				</div>
+				<div class='item-list'>
+					<div class='slider'>
+						<div class='slide-container'>
+							<div class='slide-wrapper'>
+								<div class='slide-page'>
+									<a href="javascript:void(0);" class='item'>
+										<div class='item-cover'>
+											<img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2460165077.jpg" alt="如懿传">
+										</div>
+										<p>如懿传
+											<strong>7.3</strong>
+										</p>
+									</a>
+									<a href="javascript:void(0);" class='item'>
+										<div class='item-cover'>
+											<img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2509891341.jpg" alt="延禧攻略">
+										</div>
+										<p>延禧攻略
+											<strong>7.2</strong>
+										</p>
+									</a>
+									<a href="javascript:void(0);" class='item'>
+										<div class='item-cover'>
+											<img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2525797279.jpg" alt="梅赛德斯先生 第二季">
+										</div>
+										<p>梅赛德斯先生 第二季
+											<strong>7.7</strong>
+										</p>
+									</a>
+									<a href="javascript:void(0);" class='item'>
+										<div class='item-cover'>
+											<img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2533602913.jpg" alt="我就是演员">
+										</div>
+										<p>我就是演员
+											<strong>7.2</strong>
+										</p>
+									</a>
+									<a href="javascript:void(0);" class='item'>
+										<div class='item-cover'>
+											<img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2504612154.jpg" alt="海豹六队 第二季">
+										</div>
+										<p>海豹六队 第二季
+											<strong>6.6</strong>
+										</p>
+									</a>
+									<a href="javascript:void(0);" class='item'>
+										<div class='item-cover'>
+											<img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2512135753.jpg" alt="香蜜沉沉烬如霜">
+										</div>
+										<p>香蜜沉沉烬如霜
+											<strong>7.4</strong>
+										</p>
+									</a>
+									<a href="javascript:void(0);" class='item'>
+										<div class='item-cover'>
+											<img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2530496815.jpg" alt="天盛长歌">
+										</div>
+										<p>天盛长歌
+											<strong>7.9</strong>
+										</p>
+									</a>
+									<a href="javascript:void(0);" class='item'>
+										<div class='item-cover'>
+											<img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2527167540.jpg" alt="中餐厅 第二季">
+										</div>
+										<p>中餐厅 第二季
+											<strong>6.6</strong>
+										</p>
+									</a>
+									<a href="javascript:void(0);" class='item'>
+										<div class='item-cover'>
+											<img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2533751482.jpg" alt="天坑鹰猎">
+										</div>
+										<p>天坑鹰猎
+											<strong>7.7</strong>
+										</p>
+									</a>
+									<a href="javascript:void(0);" class='item'>
+										<div class='item-cover'>
+											<img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2527543485.jpg" alt="幻乐之城">
+										</div>
+										<p>幻乐之城
+											<strong>7.1</strong>
+										</p>
+									</a>
+								</div>
+								<div class='slide-ctrl'>
+									<a href="javascript:void(0)" class='btn-prev'></a>
+									<a href="javascript:void(0)" class='dot'></a>
+									<a href="javascript:void(0)" class='dot'></a>
+									<a href="javascript:void(0)" class='dot'></a>
+									<a href="javascript:void(0)" class='dot'></a>
+									<a href="javascript:void(0)" class='dot'></a>
+									<a href="javascript:void(0)" class='btn-next'></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 热门推荐 -->
+			<div class='hot-recommend'>
+				<div class='screening-hd'>
+					<div class='slide-control'>
+						<span class='prev-btn'><a href="javascript:void(0);"></a></span>
+						<span class='next-btn'><a href="javascript:void(0);"></a></span>
+					</div>
+					<div class='slide-tip'>
+						<span class='slide-index'>1</span>
+						/
+						<span class='slide-max'>9</span>
+					</div>
+					<h2>热门推荐</h2>
+				</div>
+				<div class='recommend-item'>
+					<ul class='slide-container'>
+						<li class='slide-item'>
+							<div class='frame'>
+								<a href="javascript:void(0);">
+									<img src="https://img3.doubanio.com/view/movie_gallery_frame_hot_rec/normal/public/ca99d02d930efed.jpg" alt="第75届威尼斯电影节完整获奖名单">
+								</a>
+								<div class='item-detail'>
+									<div class='detail-hd'>
+										<a href="javascript:void(0);">
+											<h3>第75届威尼斯电影节完整获奖名单</h3>
+										</a>
+									</div>
+									<div class='detail-bd'>
+										<p>阿方索·卡隆《罗马》获得最佳影片金狮奖！欧格斯·兰斯莫斯《宠儿》获得评委会大奖及最佳女主，雅克·欧迪亚《希斯特斯兄弟》获得最佳导演！</p>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class='slide-item'></li>
+						<li class='slide-item'></li>
+						<li class='slide-item'></li>
+						<li class='slide-item'></li>
+						<li class='slide-item'></li>
+						<li class='slide-item'></li>
+						<li class='slide-item'></li>
+						<li class='slide-item'></li>
+					</ul>
+				</div>
+			</div>
+			<!-- 最受欢迎的影评 -->
+			<div class='hot-review'>
+				<div class='reviews-hd'>
+					<h2>
+						最受欢迎的影评
+						<span><a href="javascript:void(0);">更多热门影评»</a></span>
+						<span><a href="javascript:void(0);">新片影评»</a></span>
+					</h2>
+				</div>
+				<div class='reviews-bd'>
+					<div class='review'>
+						<div class='review-hd'>
+							<a href="javascript:void(0);">
+								<img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2079334286.webp" alt="穿越时空的少女">
+							</a>
+						</div>
+						<div class='review-bd'>
+							<h3>
+								<a href="javascript:void(0);">不会被遗忘的时光</a>
+							</h3>
+							<div class='review-meta'>
+								<a href="javascript:void(0);">你谁呀</a>
+								评论
+								<a href="javascript:void(0);">《穿越时空的少女》</a>
+								<span class='star30'></span>
+							</div>
+							<div class='review-content'>
+								学校操场上，精力过剩的男生用运动挥霍着青春期的汗水，门口那条林荫步道中，与好友结伴走向回家的公交站，还有那辆刚买不久但已被骑得伤痕累累的变速山地车，和书包里节省下两天的早餐钱所换来的漫画书。 当然，...
+								<a href="javascript:void(0);">(全文)</a>
+							</div>
+						</div>
+					</div>
+					<div class='review'>
+						<div class='review-hd'>
+							<a href="javascript:void(0);">
+								<img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2529571873.webp" alt="一出好戏">
+							</a>
+						</div>
+						<div class='review-bd'>
+							<h3>
+								<a href="javascript:void(0);">《一出好戏》：野心够大，能力不足</a>
+							</h3>
+							<div class='review-meta'>
+								<a href="javascript:void(0);">电影幕后故事</a>
+								评论
+								<a href="javascript:void(0);">《一出好戏》</a>
+								<span class='star30'></span>
+							</div>
+							<div class='review-content'>
+								黄渤当导演了，什么概念？ 现在舞台上活跃的明星演员们有一个算一个，都是毁誉参半，有人捧就有人骂，这是常态。 但唯独黄渤是个例外，他是有口皆碑的“好人”，这可不是发好人卡的意思，是真的人好。 做人做事态...
+								<a href="javascript:void(0);">(全文)</a>
+							</div>
+						</div>
+					</div>
+					<div class='review'>
+						<div class='review-hd'>
+							<a href="javascript:void(0);">
+								<img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2521499639.webp" alt="死侍2">
+							</a>
+						</div>
+						<div class='review-bd'>
+							<h3>
+								<a href="javascript:void(0);">《死侍2》的加长版与普通版的区别</a>
+							</h3>
+							<div class='review-meta'>
+								<a href="javascript:void(0);">混斗</a>
+								评论
+								<a href="javascript:void(0);">《死侍2》</a>
+								<span class='star40'></span>
+							</div>
+							<div class='review-content'>
+								1.开头的四段黑帮大战都遭到了删改。加长版中的打斗戏份多了，台词少了。其中“极道大战”的删减最为可惜。“极道大战”必须得看加长版，因为打得很有死侍的风格，其中竟然还有“浴巾搓鸟”的打法。 2.死侍在酒吧...
+								<a href="javascript:void(0);">(全文)</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 页面右侧 -->
+		<div class='aside'>
+			<!-- 豆瓣电影评分八问 -->
+			<div class='rating-answer'>
+				<a href="javascript:void(0);">豆瓣电影评分八问</a>
+			</div>
+
+			<!-- 广告 -->
+			<div class='advent-top-right'>
+				<a href="javascript:void(0);">
+					<img src="https://oimagec7.ydstatic.com/image?id=-3997379059262276306&product=adpublish&w=300&h=250&sc=0&rm=0" alt="">
+					<span>广告</span>
+				</a>
+			</div>
+
+			<!-- 电影活动 -->
+			<div class='movie-activitys'>
+				<h2>电影活动 &nbsp· · · · · ·</h2>
+				<ul>
+					<li><a href="javascript:void(0);">对答666丨佛系男神挑战高智商终极对决</a></li>
+					<li><a href="javascript:void(0);">今晚我有空 |血腥残暴！今年最震撼纪录片</a></li>
+					<li><a href="javascript:void(0);">马伊琍衣品遭吐槽，清奇脑回路解读流行语</a></li>
+				</ul>
+			</div>
+
+			<!-- 一周口碑榜 -->
+			<div class='billboard'>
+				<div class='billboard-hd'>
+					<h2>
+						一周口碑榜
+						<span>
+							<a href="javascript:void(0);">更多榜单»</a>
+						</span>
+					</h2>
+				</div>
+				<div class='billboard-bd'>
+					<table>
+						<tbody>
+							<tr>
+								<td class='td-order'>1</td>
+								<td class='td-title'><a href="javascript:void(0);">碟中谍6：全面瓦解</a></td>
+							</tr>
+							<tr>
+								<td class='td-order'>2</td>
+								<td class='td-title'><a href="javascript:void(0);">24帧</a></td>
+							</tr>
+							<tr>
+								<td class='td-order'>3</td>
+								<td class='td-title'><a href="javascript:void(0);">传奇的诞生</a></td>
+							</tr>
+							<tr>
+								<td class='td-order'>4</td>
+								<td class='td-title'><a href="javascript:void(0);">德鲁大叔</a></td>
+							</tr>
+							<tr>
+								<td class='td-order'>5</td>
+								<td class='td-title'><a href="javascript:void(0);">寄宿学校</a></td>
+							</tr>
+							<tr>
+								<td class='td-order'>6</td>
+								<td class='td-title'><a href="javascript:void(0);">德国往事</a></td>
+							</tr>
+							<tr>
+								<td class='td-order'>7</td>
+								<td class='td-title'><a href="javascript:void(0);">夫妻之间</a></td>
+							</tr>
+							<tr>
+								<td class='td-order'>8</td>
+								<td class='td-title'><a href="javascript:void(0);">高山</a></td>
+							</tr>
+							<tr>
+								<td class='td-order'>9</td>
+								<td class='td-title'><a href="javascript:void(0);">魔女</a></td>
+							</tr>
+							<tr>
+								<td class='td-order'>10</td>
+								<td class='td-title'><a href="javascript:void(0);">尤物：海蒂·拉玛传</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<!-- 广告 -->
+			<div class='advent-middle-right'>
+				<a href="javascript:void(0);">
+					<img src="https://oimagea7.ydstatic.com/image?id=2456262370094593175&product=adpublish&w=300&h=250&sc=0&rm=0" alt="">
+					<span>广告</span>
+				</a>
+			</div>
+
+			<!-- 热门豆列 -->
+			<div class='doulist'>
+				<h2>热门豆列</h2>
+				<ul>
+					<li>
+						<span>411推荐</span>
+						<div class='dou-title'>
+							<a href="javascript:void(0);">黑色电影</a>
+						</div>
+					</li>
+					<li>
+						<span>342推荐</span>
+						<div class='dou-title'>
+							<a href="javascript:void(0);">泡菜国的犯罪剧真心赞！</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<!--  合作联系-->
+			<div class='contact-and-cooperation'>
+				<div class='contact-and-cooperation-hd'>
+					<h2>合作联系</h2>
+				</div>
+				<div class='contact-and-cooperation-bd'>
+					<ul>
+						<li>
+							电影合作邮箱：
+							<img src="https://img3.doubanio.com/f/movie/c858df348b4d199c848774ed1b3ed529052f0fa1/pics/movie/email_movie.png" alt="">
+						</li>
+						<li>
+							电视剧合作邮箱：
+							<img src="https://img3.doubanio.com/f/movie/4de38ce91fdad7bcf3246c2594c84fa800eba08a/pics/movie/email_tv.png" alt="">
+							<img src="https://img3.doubanio.com/f/shire/486503da8c82ffdbecec41c065927f96cbf02e4f/pics/icon/ic_new.png" alt="" class='new'>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- 关注我们 -->
+			<div class='contact-means'>
+				<h2>关注我们</h2>
+				<ul class='contact-means-list-container'>
+					<li>
+						<a href="javascript:void(0);" class='contact-means-pic weibo-pic'></a>
+						<a href="javascript:void(0);" class='contact-means-text'>微博</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);" class='contact-means-pic weixin-pic'></a>
+						<a href="javascript:void(0);" class='contact-means-text'>微信</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);" class='contact-means-pic banzui-pic'></a>
+						<a href="javascript:void(0);" class='contact-means-text'>瓣嘴</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);" class='contact-means-pic xinxiangjiang-pic'></a>
+						<a href="javascript:void(0);" class='contact-means-text'>鑫像奖小站</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);" class='contact-means-pic guanying-pic'></a>
+						<a href="javascript:void(0);" class='contact-means-text'>观影club</a>
+					</li>
+				</ul>
+			</div>
+
+			<!-- 广告 -->
+			<div class='advent-bottom-right'>
+				<div class='advent-bottom-right-container'>
+					<a href="javascript:void(0);">
+						<img src="https://img3.doubanio.com/view/dale-online/dale_ad/public/d9e4d3578b9363d.jpg" alt="">
+					</a>
+					<div class='article-info'>
+						<p class='article-info-title'>
+							<a href="javascript:void(0);">除了张震，你还应该从杨德昌的电影里看到点儿啥？</a>
+						</p>
+						<p class='author'>豆瓣时间</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='extra'></div>
+	</div>
+	<div id='page_footer' class='page-footer'>
+		<span class='footer-left'>
+			© 2005－2018 douban.com, all rights reserved 北京豆网科技有限公司
+		</span>
+		<span class='footer-right'>
+			<a href="https://www.douban.com/about">关于豆瓣</a>
+			·
+			<a href="https://www.douban.com/jobs">在豆瓣工作</a>
+			·
+			<a href="https://www.douban.com/about?topic=contactus">联系我们</a>
+			·
+			<a href="https://www.douban.com/about?policy=disclaimer">免费声明</a>
+			·
+			<a href="https://help.douban.com/?app=movie">帮助中心</a>
+			·
+			<a href="https://www.douban.com/doubanapp/">移动应用</a>
+			·
+			<a href="https://www.douban.com/partner/">豆瓣广告</a>
+		</span>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+<script src='js/jquery-1.12.4.js'></script>
+<script src='js/index.js'></script>
+</body>
+</html>

@@ -1,0 +1,1362 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+body{
+	font: 12px Helvetica,Arial,sans-serif;
+	line-height: 1.62;
+}
+
+html body{
+	font-size: 13px;
+}
+
+div, p{
+	display: block;
+}
+
+/*顶部菜单栏*/
+
+.top-nav{
+	height: 28px;
+	color: #d5d5d5;
+	background-color: #545652;
+	min-width: 950px;
+	font-size: 12px;
+	line-height: 1.62;
+}
+
+.top-nav .top-nav-items{
+	font-size: 0;
+}
+
+.top-nav .top-nav-items ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: block;
+}
+
+.top-nav .top-nav-items ul li{
+	display: inline-block;
+	zoom: 1;
+	line-height: 28px;
+	font-size: 12px;
+	vertical-align: baseline;
+}
+
+.top-nav .top-nav-items a{
+	display: inline-block;
+	zoom: 1;
+	padding: 0 12px;
+	height: 12px;
+	text-decoration: none;
+	color: #d5d5d5;
+}
+
+.top-nav a:hover{
+	color: #fff;
+}
+
+.top-nav-info{
+	float: right;
+	margin: 0 12px 0 0;
+	line-height: 28px;
+}
+
+.top-nav-info a{
+	display: inline-block;
+	zoom: 1;
+	padding: 0 12px;
+	margin: 0;
+	height: 28px;
+	text-decoration: none;
+	color: #d5d5d5;
+}
+
+.downloadapp{
+	float: right;
+	position: relative;
+	line-height: 28px;
+	margin-right: 5px;
+}
+
+.downloadapp>a{
+	display: inline-block;
+	zoom: 1;
+	padding: 0 8px;
+	height: 28px;
+	color: #d5d5d5;
+	text-decoration: none;
+}
+
+.downloadapp:hover .downloadapp-tip{
+	display: block;
+}
+
+.downloadapp-tip{
+	position: absolute;
+	display: none;
+	padding: 10px 20px 30px;
+	left: -76px;
+	width: 211px;
+	border-top: none;
+	color: #111;
+	font-size: 15px;
+	background-color: #fff;
+	line-height: 1.62;
+	font-weight: bold;
+	text-align: center;
+	-webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    z-index: 999;
+}
+
+.downloadapp-tip .dd-pic{
+	padding-top: 170px;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 24px;
+	font-weight: 400;
+	background: url(https://img3.doubanio.com/dae/accounts/resources/984c231/shire/assets/nav_doubanapp_6.png) no-repeat center;
+}
+
+.downloadapp-tip .download-pic{
+	padding-top: 160px;
+	margin-top: 30px;
+	font-size: 0;
+	background: url(https://img3.doubanio.com/dae/accounts/resources/984c231/shire/assets/nav_doubanapp_6_qrcode.png) no-repeat center;
+}
+
+.downloadapp-tip .downloadapp-mobile{
+	margin-top: 10px;
+}
+
+.downloadapp-tip .downloadapp-mobile a{
+	color: #37a;
+	display: inline;
+	font-weight: normal;
+	font-size: 12px;
+	background: none;
+	padding: 0;
+}
+
+.downloadapp-tip .downloadapp-mobile a:hover{
+	color: #37a;
+}
+
+.downloadapp-tip .downloadapp-mobile span{
+	font-size: 12px;
+}
+
+.downloadapp-tip .downloadapp-mobile .android{
+	background-position: 0 -130px;
+	margin-top: 8px;
+}
+
+/*顶部搜索区域*/
+
+.nav{
+	margin-bottom: 40px;
+	overflow: hidden;
+	position: relative;
+	padding: 10px 0 15px 0;
+	zoom: 1;
+	background-color: #f0f3f5;
+	width: 100%;
+	min-width: 1040px;
+	display: block;
+}
+
+.nav .nav-wrap{
+	border-bottom: 1px solid #e5ebe4;
+}
+
+.nav .nav-primary{
+	width: 1040px;
+	margin: 0 auto;
+	overflow: visible !important;
+	position: relative;
+	padding: 0 0 5px;
+	zoom: 1;
+}
+
+.nav .nav-logo{
+	background: url(https://img3.doubanio.com/dae/accounts/resources/19507ad/movie/assets/lg_movie_a12_2.png) no-repeat 0 12px;
+	float: left;
+	width: 145px;
+	height: 56px;
+	margin: 0 13px 0 0;
+}
+
+.nav .nav-logo a{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	display: block;
+	line-height: 100em;
+}
+
+.nav .nav-search{
+	margin-left: 145px;
+	overflow: visible !important;
+	padding: 10px 0 15px 0;
+	zoom: 1;
+	position: relative;
+}
+
+.nav-search form{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	display: block;
+}
+
+.nav-search fieldset{
+	margin: 0;
+	padding: 0;
+	border: none;
+	position: static;
+}
+
+.nav-search legend{
+	display: none;
+}
+
+.nav-search label{
+	position: absolute;
+	line-height: 30px;
+	left: 11px;
+	top: 10px;
+	cursor: text;
+	width: auto;
+	color: #ddd;
+	vertical-align: middle;
+}
+
+.nav-search .inp{
+	background-image: url(https://img3.doubanio.com/dae/accounts/resources/19507ad/movie/assets/nav_mv_bg.png?s=1);
+	float: left;
+	width: 470px;
+	height: 34px;
+	text-align: center;
+	cursor: text;
+	margin-right: -3px;
+}
+
+.nav-search .inp input{
+	width: 96%;
+	text-align: left;
+	margin: 0;
+	padding-left: 10px;
+	background-color: #fff;
+	height: 30px;
+	outline: none;
+	border: none;
+}
+
+.inp-btn{
+	position: relative;
+	left: -1px;
+	width: 37px;
+	height: 34px;
+	overflow: hidden;
+	zoom: 1;
+}
+
+.nav-search .inp-btn input{
+	background: url(https://img3.doubanio.com/dae/accounts/resources/19507ad/movie/assets/nav_mv_bg.png?s=1) no-repeat 0 -40px;
+	width: 100%;
+	height: 100%;
+	font-size: 0;
+	cursor: pointer;
+	color: transparent;
+	overflow: hidden;
+	padding: 35px 0 0 0;
+	border: none;
+}
+
+/*影视条目*/
+
+.nav-secondary{
+	width: 1040px;
+	margin: 0 auto;
+	padding-bottom: 0;
+	zoom: 1;
+	overflow: hidden;
+	height: 30px;
+}
+
+.nav-secondary .nav-items{
+	font-size: 14px;
+	zoom: 1;
+	float: none;
+	line-height: 20px;
+}
+
+.nav-secondary .nav-items ul{
+	margin: 9px 0;
+}
+
+.nav-secondary .nav-items ul li{
+	display: inline;
+	margin-right: 25px;
+}
+
+.nav-secondary .nav-items ul li a{
+	color: #27a;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/*正在热映*/
+.page-wrapper{
+	width: 1040px;
+	margin: 0 auto;
+}
+
+.page-content{
+	min-height: 420px;
+}
+
+.page-content .article{
+	float: left;
+	width: 675px;
+	padding-right: 25px;
+}
+
+.screening{
+	margin-bottom: 36px;
+}
+
+.slide-control{
+	float: right;
+	margin: 5px 0 0 15px;
+}
+
+.slide-control span{
+	font-size: 12px;
+}
+
+.slide-control a{
+	display: block;
+	float: left;
+	cursor: pointer;
+	width: 18px;
+	height: 18px;
+	margin-right: 5px;
+	background: url(https://img3.doubanio.com/f/movie/708be21a7bb2d0f21419dc4e2e2fde8b21ad661a/pics/movie/slide_swithc_2.png) no-repeat;
+}
+
+.slide-control .prev-btn a{
+	background-position: 0 0;
+}
+
+.slide-control .next-btn a{
+	background-position: -18px 0;
+}
+
+.slide-tip{
+	float: right;
+	line-height: 30px;
+	color: #666;
+}
+
+.slide-tip, .slide-tip span{
+	font-size: 12px;
+}
+
+.screening-hd h2{
+	color: #111;
+	margin-bottom: 18px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #eaeaea;
+}
+
+html h2{
+	font: 15px Arial, Helvetica, sans-serif;
+	margin: 0 0 12px 0;
+	line-height: 150%;
+}
+
+.screening-hd h2 span{
+	margin-left: 15px;
+	font-size: 13px;
+}
+
+.screening-hd h2 span a{
+	text-decoration: none;
+	color: #666699;
+}
+
+.screening-bd{
+	overflow: hidden;
+	height: 270px;
+	position: relative;
+}
+
+.screening-bd .slide-content{
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	list-style: none;
+	white-space: nowrap;
+    letter-spacing: -0.31em;
+}
+
+.screening-bd .slide-item{
+	width: 115px;
+	height: 270px;
+	margin-right: 25px;
+	font-size: 12px;
+	overflow: hidden;
+	text-align: center;
+	display: inline-block;
+	vertical-align: top;
+	letter-spacing: normal;
+	word-spacing: normal;
+}
+
+.screening-bd .slide-item ul{
+	list-style: none;
+}
+
+.screening-bd .slide-item .poster{
+	height: 161px;
+	overflow: hidden;
+	margin-bottom: 12px;
+}
+
+a{
+	text-decoration: none;
+	color: #666699;
+}
+
+
+.screening-bd .slide-item .title a{
+	color: #333;
+}
+
+.screening-bd .slide-item .poster img{
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+	border-width: 0;
+}
+
+.screening-bd .slide-item .title{
+	font-size: 14px;
+	overflow: hidden;
+    letter-spacing: -0.31em;
+    height: 22px;
+    white-space: nowrap;
+}
+
+.screening-bd .slide-item .title a{
+	display: inline-block;
+	vertical-align: top;
+    letter-spacing: normal;
+    word-spacing: normal;
+    height: 24px;
+    line-height: 24px;
+}
+
+.screening-bd .slide-item .rating{
+	display: inline-block;
+	margin: 4px auto 2px;
+	height: 19px;
+	zoom: 1;
+}
+
+.screening-bd .slide-item .rating span{
+	float: left;
+}
+
+.screening-bd .slide-item .rating .rating-star{
+	margin: 3px 3px 0 0;
+	overflow: hidden;
+}
+
+.screening-bd .slide-item .rating .subject-rate{
+	font-size: 12px;
+	color: #e09015;
+	margin-left: 2px;
+}
+
+.screening-bd .slide-item .ticket-btn span{
+	display: block;
+	margin: 0 auto;
+	width: 90px;
+	height: 24px;
+	background-color: #268dcd;
+	color: #fff;
+	text-align: center;
+	line-height: 24px;
+	border-radius: 2px;
+}
+
+.screening-bd .slide-item .ticket-btn span a{
+	color: #fff;
+}
+
+/*电影广告海报*/
+.movie-poster{
+	margin-bottom: 20px;
+	display: block;
+	width: 675px;
+	height: 112px;
+	overflow: hidden;
+}
+
+.movie-poster img{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/*最近热门电影*/
+.hot-movie{
+	margin-bottom: 40px;
+}
+
+.top-filter{
+	overflow: hidden;
+	zoom: 1;
+}
+
+.top-filter h2{
+	margin-bottom: 18px;
+	border-bottom: 1px solid #eaeaea;
+	color: #111;
+	padding-bottom: 10px;
+	overflow: hidden;
+	line-height: normal;
+	font-size: 17px;
+}
+
+.top-filter .activate{
+	float: left;
+	cursor: default;
+	color: #111;
+	font-size: 16px;
+	display: block;
+}
+
+.top-filter .filter{
+	float: left;
+	margin-left: 14px;
+	margin-right: -50px;
+	width: 450px;
+}
+
+.top-filter .tags{
+	position: relative;
+	top: 1px;
+	overflow: hidden;
+	zoom: 1;
+}
+
+.top-filter .tags-list{
+	width: auto;
+	display: inline;
+	padding-right: 5px;
+}
+
+.top-filter .tags-list a{
+	margin: 0;
+	padding: 2px 0;
+	margin-right: 12px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 13px;
+	color: #9B9B9B;
+}
+
+.top-filter .tags-list a:hover{
+	color: #fff;
+	background-color: #37a;
+}
+
+.top-filter .tags-list a:nth-child(1){
+	color: #111;
+}
+
+.top-filter .tags-list a:nth-child(1):hover{
+	background-color: #fff;
+}
+
+.top-filter h2>a{
+	float: right;
+	font-size: 13px;
+	top: 2px;
+	position: relative;
+	color: #27a;
+}
+
+.top-filter h2>a:hover{
+	color: #fff;
+	background-color: #37a;
+}
+
+.item-list{
+	width: 675px;
+	overflow: hidden;
+	margin-right: -10px;
+}
+
+.item-list .slide-container{
+	overflow: hidden;
+	position: relative;
+}
+
+.item-list .slide-wrapper{
+	width: 700px;
+	left: 0;
+}
+
+.item-list .slide-wrapper .slide-page{
+	width: 700px;
+	float: left;
+}
+
+.item-list .slide-wrapper .item{
+	margin: 0 25px 10px 0;
+	display: block;
+	float: left;
+	width: 115px;
+	text-align: center;
+	color: #37a;
+	font-size: 13px;
+}
+
+.item-list .slide-wrapper .item .item-cover{
+	height: 161px;
+	overflow: hidden;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+}
+
+.item-list .slide-wrapper .item .item-cover img{
+	border-width: 0;
+	vertical-align: middle;
+	width: 100%;
+	height: 100%;
+}
+
+.item-list .slide-wrapper .item p{
+	margin: 5px 0 0;
+	height: 44px;
+	overflow: hidden;
+	display: block;
+}
+
+.item-list .slide-wrapper .item p strong{
+	color: #e09015;
+	font-weight: normal;
+}
+
+.item-list .slide-wrapper .slide-ctrl{
+	float: right;
+	top: -7px;
+	margin: 5px 0 0 15px;
+	text-align: center;
+	width: 725px;
+	height: 24px;
+}
+
+.item-list .slide-wrapper .slide-ctrl a{
+	background: url(https://img3.doubanio.com/f/movie/708be21a7bb2d0f21419dc4e2e2fde8b21ad661a/pics/movie/slide_swithc_2.png) no-repeat -50px -50px;
+	width: 18px;
+	height: 18px;
+	margin-right: 5px;
+	display: block;
+	float: left;
+	cursor: pointer;
+}
+
+.item-list .slide-wrapper .slide-ctrl a, .item-list .slide-wrapper .slide-ctrl .dot{
+	display: inline-block;
+	float: none;
+	cursor: pointer;
+	margin: 0;
+}
+
+.item-list .slide-wrapper .slide-ctrl .btn-prev{
+	margin-right: 10px;
+	background-position: 0 0;
+}
+
+.item-list .slide-wrapper .slide-ctrl .btn-next{
+	margin-left: 5px;
+    background-position: -18px 0;
+}
+
+.item-list .slide-wrapper .slide-ctrl .dot{
+	width: 6px;
+	height: 6px;
+	position: relative;
+	border-radius: 50%;
+	background-color: #D8D8D8;
+	margin-right: 5px;
+	top: -5px;
+}
+
+.item-list .slide-wrapper .slide-ctrl a:nth-child(2){
+	background-color: #6198D7;
+}
+
+/*热门电视剧*/
+.hot-tv{
+	margin-bottom: 40px;
+}
+
+/*热门推荐*/
+.hot-recommend{
+	margin-bottom: 36px;
+}
+
+.recommend-item{
+	width: 675px;
+	height: 240px;
+	position: relative;
+	overflow: hidden;
+}
+
+.recommend-item .slide-container{
+	margin: 0;
+	padding: 0;
+	left: 0;
+	white-space: nowrap;
+	letter-spacing: -0.31em;
+	position: absolute;
+}
+
+.recommend-item .slide-container .slide-item{
+	vertical-align: top;
+    word-spacing: normal;
+    display: inline-block;
+    letter-spacing: normal;
+    font-size: 12px;
+}
+
+.recommend-item .slide-item .frame{
+	width: 675px;
+	height: 240px;
+	white-space: normal;
+}
+
+.recommend-item .slide-item .frame a{
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.recommend-item .slide-item .frame a img{
+	width: 350px;
+	height: 240px;
+	border: none;
+	float: left;
+	vertical-align: middle;
+}
+
+.recommend-item .slide-item .frame .item-detail{
+	position: relative;
+	background-color: #f9f9f9;
+	width: 277px;
+	height: 168px;
+	padding: 48px 24px 24px 24px;
+	display: inline-block;
+	vertical-align: top;
+    letter-spacing: normal;
+    word-spacing: normal;
+}
+
+.recommend-item .slide-item .frame .item-detail .detail-hd{
+	margin-bottom: 18px;
+}
+
+.recommend-item .slide-item .frame .item-detail .detail-hd a{
+	color: #666699;
+	text-decoration: none;
+}
+
+.recommend-item .slide-item .frame .item-detail .detail-hd a h3{
+	font-size: 18px;
+	line-height: 28px;
+	color: #111;
+	margin-left: 4px;
+	margin-bottom: 1px;
+	font-weight: normal;
+}
+
+.recommend-item .slide-item .frame .item-detail .detail-bd p{
+	font-size: 13px;
+	color: #999;
+	line-height: 20px;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	display: block;
+}
+
+/*最受欢迎的影评*/
+
+.hot-review{
+	margin-bottom: 36px;
+}
+
+.hot-review .reviews-hd{
+	display: block;
+}
+
+.hot-review .reviews-hd h2{
+	font-size: 16px;
+	color: #111;
+	border-bottom: 1px solid #eaeaea;
+	margin-bottom: 18px;
+	padding-bottom: 10px;
+	line-height: 150%;
+}
+
+.hot-review .reviews-hd h2 span{
+	margin-left: 12px;
+	font-size: 13px;
+}
+
+.hot-review .reviews-hd h2 span a{
+	text-decoration: none;
+	color: #37a;
+}
+
+.hot-review .reviews-bd{
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+.hot-review .reviews-bd .review{
+	margin-bottom: 24px;
+	padding-bottom: 24px;
+	border-bottom: 1px solid #eaeaea;
+	overflow: hidden;
+	zoom: 1;
+}
+
+.hot-review .reviews-bd .review:last-child{
+	border: none;
+}
+
+.hot-review .reviews-bd .review .review-hd{
+	float: left;
+	width: 68px;
+}
+
+.hot-review .reviews-bd .review .review-hd a{
+	text-decoration: none;
+	color: #37a;
+}
+
+.hot-review .reviews-bd .review .review-hd a img{
+	width: 68px;
+	vertical-align: middle;
+	display: inline;
+	border-width: 0;
+}
+
+.hot-review .reviews-bd .review .review-bd{
+	padding-left: 83px;
+	font-size: 13px;
+}
+
+.hot-review .reviews-bd .review .review-bd h3{
+	height: auto;
+	background: none;
+	margin: 0;
+	font-size: 15px;
+	font-weight: normal;
+}
+
+.hot-review .reviews-bd .review .review-bd h3 a{
+	text-decoration: none;
+	color: #37a;
+}
+
+.hot-review .reviews-bd .review .review-bd .review-meta{
+	padding: 5px 0;
+	color: #666;
+}
+
+.hot-review .reviews-bd .review .review-bd .review-meta a{
+	color: #666;
+	text-decoration: none;
+}
+
+.hot-review .reviews-bd .review .review-bd .review-meta a:hover{
+	background-color: #37a;
+	color: #fff;
+}
+
+.hot-review .reviews-bd .review .review-bd .review-meta span{
+	background: url(https://img3.doubanio.com/f/shire/b8f4c3672ef81106701071831e22422a745d3b74/pics/rating_icons/ic_rating_s.png) no-repeat;
+	width: 55px;
+	height: 11px;
+	display: inline-block;
+	margin: 0 3px 0 0;
+	overflow: hidden;
+	zoom: 1;
+}
+
+.hot-review .reviews-bd .review .review-bd .review-meta .star30{
+	background-position: 0 -44px;
+}
+
+.hot-review .reviews-bd .review .review-bd .review-content{
+	line-height: 20px;
+}
+
+.hot-review .reviews-bd .review .review-bd .review-content a{
+	text-decoration: none;
+	color: #37a;
+}
+
+.hot-review .reviews-bd .review .review-bd .review-meta .star40{
+	background-position: 0 -22px;
+}
+
+/*页面右侧*/
+.aside{
+	float: right;
+	width: 300px;
+}
+
+/*豆瓣电影评分八问*/
+.aside .rating-answer{
+	width: 282px;
+	margin: 0 0 20px;
+	padding: 12px 0 12px 18px;
+	line-height: 1.5;
+	background-color: #f2f7f6;
+	border-radius: 4px;
+	font-size: 13px;
+}
+
+.aside .rating-answer a{
+	text-decoration: none;
+	color: #37a;
+}
+
+.aside .rating-answer a:hover{
+	background-color: #37a;
+	color: #fff;
+}
+
+/*广告*/
+.aside .advent-top-right, .aside .advent-middle-right{
+	position: relative;
+	margin: 0 0 20px;
+	display: block;
+	width: 300px;
+	height: 250px;
+	/*background-color: red;*/
+	overflow: hidden;
+}
+
+.aside .advent-top-right a, .aside .advent-middle-right a{
+	text-decoration: none;
+	color: #37a;
+}
+
+.aside .advent-top-right a img, .aside .advent-middle-right a img{
+	width: 100%;
+	height: 100%;
+}
+
+.aside .advent-top-right a span, .aside .advent-middle-right a span{
+	z-index: 99;
+	color: #fff;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	cursor: text;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.3);
+	font-size: 12px;
+	line-height: 1;
+	padding: 4px;
+}
+
+/*电影活动*/
+.aside .movie-activitys{
+	margin: 0 0 20px;
+	padding: 12px 0 12px 18px;
+	background-color: #f2f7f6;
+	width: 282px;
+	border-radius: 4px;
+	line-height: 1.5;
+}
+
+.aside .movie-activitys h2{
+	font-size: 16px;
+	color: #072;
+	border: none;
+}
+
+.aside .movie-activitys ul{
+	list-style: none;
+	font-size: 14px;
+	color: #cedcd9;
+}
+
+.aside .movie-activitys li{
+	margin-top: 8px;
+	list-style: none;
+	font-size: 13px;
+}
+
+.aside .movie-activitys li a{
+	text-decoration: none;
+	color: #37a;
+}
+
+.aside .movie-activitys li a:hover{
+	background-color: #37a;
+	color: #fff;
+}
+
+/*一周口碑榜*/
+.billboard{
+	margin-bottom: 50px;
+	display: inline-block;
+	zoom: 1;
+}
+
+.billboard .billboard-hd{
+	display: block;
+}
+
+.billboard .billboard-hd h2{
+	margin-bottom: 5px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #eaeaea;
+	font-size: 16px;
+	color: #111;
+	line-height: 150%;
+}
+
+.billboard .billboard-hd h2 span{
+	margin-left: 12px;
+	font-size: 13px;
+}
+
+.billboard .billboard-hd h2 span a{
+	text-decoration: none;
+	color: #37a;
+}
+
+.billboard .billboard-hd h2 span a:hover{
+	background-color: #37a;
+	color: #fff;
+}
+
+.billboard .billboard-bd{
+	display: block;
+}
+
+.billboard .billboard-bd table{
+    border-collapse: collapse;
+    border: none;
+    display: table;
+    margin: 0;
+    padding: 0;
+    border-spacing: 0;
+}
+
+.billboard .billboard-bd table tbody{
+	display: table-row-group;
+	vertical-align: middle;
+    border-color: inherit;
+}
+
+.billboard .billboard-bd table tbody tr{
+	display: table-row;
+	vertical-align: inherit;
+	border-color: inherit;
+}
+
+.billboard .billboard-bd table tbody tr td{
+    display: table-cell;
+    vertical-align: inherit;
+    line-height: 1.62;
+	padding: 7px 0;
+	border-bottom: 1px solid #eaeaea;
+}
+
+.billboard .billboard-bd .td-order{
+	font-size: 9px;
+	width: 20px;
+	text-align: center;
+}
+
+.billboard .billboard-bd .td-title{
+	width: 290px;
+	font-size: 13px;
+}
+
+.billboard .billboard-bd .td-title a{
+	text-decoration: none;
+	color: #37a;
+	font-size: 13px;
+}
+
+.billboard .billboard-bd .td-title a:hover{
+	background-color: #37a;
+	color: #fff;
+}
+
+/*热门豆列*/
+.doulist{
+	display: block;
+	margin-bottom: 40px;
+}
+
+.doulist h2{
+	margin-bottom: 10px;
+	color: #111;
+	font-size: 16px;
+}
+
+.doulist ul{
+	list-style: none;
+	border-top: 1px solid #eee;
+}
+
+.doulist ul li{
+	padding: 15px 0;
+	border-bottom: 1px solid #eee;
+	position: relative;
+	zoom: 1;
+	display: list-item;
+}
+
+.doulist ul li span{
+	float: right;
+	color: #999;
+	font-size: 13px;
+}
+
+.doulist ul li .dou-title{
+	width: 247px;
+}
+
+.doulist ul li .dou-title a{
+	font-size: 13px;
+	text-decoration: none;
+	color: #37a;
+}
+
+.doulist ul li .dou-title a:hover{
+	background-color: #37a;
+	color: #fff;
+}
+
+/*合作联系*/
+.contact-and-cooperation{
+	display: block;
+}
+
+.contact-and-cooperation .contact-and-cooperation-hd h2{
+	color: #111;
+	font-size: 16px;
+	margin-bottom: 18px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #eaeaea;
+	line-height: 150%;
+}
+
+.contact-and-cooperation .contact-and-cooperation-bd ul{
+	list-style: none;
+}
+
+.contact-and-cooperation .contact-and-cooperation-bd ul li{
+	line-height: 24px;
+    display: list-item;
+}
+
+.contact-and-cooperation .contact-and-cooperation-bd ul li img{
+	height: 14px;
+	margin-top: -2px;
+	vertical-align: middle;
+	max-width: 100%;
+}
+
+.contact-and-cooperation .contact-and-cooperation-bd .new{
+	margin-top: -3px;
+	height: auto;
+}
+
+/*关注我们*/
+.contact-means{
+	display: block;
+	margin: 25px 0 40px;
+    word-break: break-all;
+}
+
+.contact-means h2{
+	color: #222;
+	font-size: 14px;
+	margin-bottom: 18px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #e4e2e2;
+	line-height: 25px;
+}
+
+.contact-means .contact-means-list-container{
+	display: block;
+	list-style: none;
+}
+
+.contact-means .contact-means-list-container li{
+	float: left;
+	width: 60px;
+	text-align: center;
+	font-size: 12px;
+    display: list-item;
+}
+
+.contact-means .contact-means-list-container .contact-means-pic{
+	display: block;
+	width: 40px;
+	height: 40px;
+	margin: 0px auto 5px auto;
+}
+
+.contact-means .contact-means-list-container .contact-means-text{
+	text-decoration: none;
+	color: #37a;
+	font-size: 12px;
+	line-height: 12px;
+}
+
+.contact-means .contact-means-list-container .contact-means-text:hover{
+	background-color: #37a;
+	color: #fff;
+}
+
+.contact-means .contact-means-list-container .weibo-pic{
+	background: url(https://img3.doubanio.com/f/movie/8f5f3bdbdc71bfd34eef8e3f16d13c857e59301b/pics/movie/home_weibo.png) no-repeat 0 0;
+}
+
+.contact-means .contact-means-list-container .weixin-pic{
+	background: url(https://img3.doubanio.com/f/movie/5d377d72b39a5cd2532813d1e42da3f34438a465/pics/movie/home_weixin.png) no-repeat 0 0;
+}
+
+.contact-means .contact-means-list-container .banzui-pic{
+	background: url(https://img3.doubanio.com/f/movie/8cf33706051d29ae3cf98091070f0ec2481959ed/pics/movie/bite_me@2x.jpg) no-repeat 0 0 /100% 100%;
+}
+
+.contact-means .contact-means-list-container .xinxiangjiang-pic{
+	background: url(https://img3.doubanio.com/f/movie/c18cb6b93e0c07828c59c97e495d3816a8539bf6/pics/movie/home_award_site@2x.jpg) no-repeat 0 0 /100% 100%;
+}
+
+.contact-means .contact-means-list-container .guanying-pic{
+    /*background-size: contain;*/
+    position: relative;
+	background: url(https://img3.doubanio.com/f/movie/a3cfe33f6e301824220261241089e133d0fcb5d1/pics/movie/home_club_site@1x.jpg) no-repeat 0 0 /100% 100%;
+}
+
+
+/*广告*/
+.advent-bottom-right{
+	margin: 40px 0 20px;
+	position: relative;
+	display: block;
+	width: 300px;
+	height: 140px;
+	overflow: hidden;
+}
+
+.advent-bottom-right .advent-bottom-right-container{
+	margin-top: 40px;
+	padding: 10px;
+	clear: both;
+	background-color: #f9f9f9;
+	overflow: hidden;
+}
+
+.advent-bottom-right .advent-bottom-right-container>a{
+	//display: block;
+	float: left;
+	max-width: 96px;
+	width: 96px;
+	color: #37a;
+	text-decoration: none;
+}
+
+.advent-bottom-right .advent-bottom-right-container a img{
+	max-width: 100%;
+	display: block;
+}
+
+.advent-bottom-right .article-info{
+	margin-left: 111px;
+	overflow: hidden;
+}
+
+.advent-bottom-right .article-info p{
+	margin: 0;
+	padding: 0;
+}
+
+.advent-bottom-right .article-info .article-info-title{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.advent-bottom-right .article-info .article-info-title a{
+	text-decoration: none;
+	color: #37a;
+	font-size: 12px;
+}
+
+.advent-bottom-right .article-info .author{
+	font-size: 12px;
+	color: #999;
+	line-height: 1;
+}
+
+.extra{
+    clear: both;
+}
+
+/*页脚*/
+.page-footer{
+    color: #999;
+    margin-top: 60px;
+    border-top: 1px dashed #ddd;
+    overflow: hidden;
+    padding: 6px 0;
+    zoom: 1;
+    display: block;
+}
+
+.page-footer .footer-left{
+	float: left;
+	font-size: 12px;
+}
+
+.page-footer .footer-right{
+	float: right;
+	font-size: 12px;
+}
+
+.page-footer .footer-right a{
+	color: #37a;
+	text-decoration: none;
+}
+
+.page-footer .footer-right a:hover{
+	background-color: #37a;
+	color: #fff;
+}
